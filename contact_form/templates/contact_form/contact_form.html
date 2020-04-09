@@ -1,4 +1,12 @@
-##mako
+## mako
+<%page expression_filter="h"/>
+<%!
+from django.utils.translation import ugettext as _
+from openedx.core.djangolib.markup import Text, HTML
+from datetime import datetime
+import pytz
+from django.conf import settings
+%>
 <%inherit file="../main.html" />
 <%namespace name='static' file='../static_content.html'/>
 <%block name="pagetitle">${_("Contact Us")}</%block>
