@@ -1,0 +1,200 @@
+##mako
+<%inherit file="../main.html" />
+<%namespace name='static' file='../static_content.html'/>
+<%block name="pagetitle">${_("Contact Us")}</%block>
+
+<h2>Contact Us</h2>
+
+
+<div class="content-wrapper main-container" id="content">
+
+
+    <div class="page-heading">
+        <h1>Contact Us</h1>
+    </div>
+    <div class="grid-manual grid-container">
+        <div class="inner-container">
+
+            <div id="login-and-registration-container" class="login-register">
+                <section id="register-anchor" class="form-type">
+                    <div id="register-form" class="form-wrapper ">
+                        <form id="primary">
+                            <fieldset id="selectgroup">
+                                <div class="form-field radio-select">
+
+                                    <input type="radio" id="learner" name="selectgroup" value="Learner">
+                                    <label for="contact-learner" class="focus-out">
+                                        <span class="label-text">Learner</span>
+                                    </label>
+                                    <input type="radio" id="org" name="selectgroup"
+                                           value="College/Church/Partner/Other">
+                                    <label for="contact-org" class="focus-out">
+                                        <span class="label-text">College/Church/Partner/Other</span>
+                                    </label>
+                                </div>
+                            </fieldset>
+                        </form>
+
+                        <form method="post" id="first">
+                            {% csrf_token %}
+                            <div class="form-field text-name">
+                                <label for="contact-name" class="focus-out">
+                                    <span class="label-text">Your Name</span>
+                                </label>
+                                <input id="contact-email" type="text" name="name" class="input-block " required=""
+                                       value="">
+                            </div>
+
+                            <div class="form-field text-country">
+                                <label for="contact-country" class="focus-out">
+                                    <span class="label-text">Country</span>
+                                </label>
+                                <input id="contact-country" type="text" name="country" class="input-block " required=""
+                                       value="">
+                            </div>
+
+                            <div class="form-field email-email">
+                                <label for="contact-email" class="focus-out">
+                                    <span class="label-text">Email</span>
+                                </label>
+                                <input id="contact-email" type="email" name="email" class="input-block " required=""
+                                       value="">
+                            </div>
+                            <div class="form-field text-phone">
+                                <label for="contact-phone" class="focus-out">
+                                    <span class="label-text">Phone</span>
+                                </label>
+                                <input id="contact-phone" type="text" name="phone" class="input-block " required=""
+                                       value="">
+                            </div>
+                            <div class="form-field text-interest">
+                                <label for="contact-interest" class="focus-out">
+                                    <span class="label-text"> I’m interested in</span>
+                                </label>
+
+                                <select id="interest" name="interest">
+                                    <option value="0">---</option>
+                                    <option value="Certified Online Short Courses">Certified Online Short Courses
+                                    </option>
+                                    <option value="Online Masters Degree">Online Masters Degree</option>
+                                    <option value="On Campus Degrees">On Campus Degrees</option>
+                                    <option value="Student Bursaries">Student Bursaries</option>
+                                    <option value="Donating">Donating</option>
+                                </select>
+
+                            </div>
+
+                            <div class="form-field text-message">
+                                <label for="contact-message" class="focus-out">
+                                    <span class="label-message">Message</span>
+                                </label>
+                                <textarea id="contact-message" rows="10" cols="50" name="message" class="input-block "
+                                          value="">
+                    </textarea>
+
+                            </div>
+                            <input id="contact-orgname" type="hidden" name="orgname" class="input-block " value="na">
+                            <input type="submit" value="Submit">
+                        </form>
+
+
+                        <form method="post" action="{% url 'contact_form' %}" id="second">
+
+                            {% csrf_token %}
+                            <div class="form-field text-name">
+                                <label for="contact-name" class="focus-out">
+                                    <span class="label-text">Your Name</span>
+                                </label>
+                                <input id="contact-email" type="text" name="name" class="input-block " required=""
+                                       value="">
+                            </div>
+
+                            <div class="form-field text-orgname">
+                                <label for="contact-orgname" class="focus-out">
+                                    <span class="label-text">Organization Name</span>
+                                </label>
+                                <input id="contact-orgname" type="text" name="orgname" class="input-block " required=""
+                                       value="">
+                            </div>
+                            <div class="form-field text-country">
+                                <label for="contact-country" class="focus-out">
+                                    <span class="label-text">Country</span>
+                                </label>
+                                <input id="contact-country" type="text" name="country" class="input-block " required=""
+                                       value="">
+                            </div>
+
+                            <div class="form-field email-email">
+                                <label for="contact-email" class="focus-out">
+                                    <span class="label-text">Email</span>
+                                </label>
+                                <input id="contact-email" type="email" name="email" class="input-block " required=""
+                                       value="">
+                            </div>
+                            <div class="form-field text-phone">
+                                <label for="contact-phone" class="focus-out">
+                                    <span class="label-text">Phone</span>
+                                </label>
+                                <input id="contact-phone" type="text" name="phone" class="input-block " required=""
+                                       value="">
+                            </div>
+                            <div class="form-field text-interest">
+                                <label for="contact-interest" class="focus-out">
+                                    <span class="label-text"> I’m interested in</span>
+                                </label>
+
+                                <select id="interest" name="interest">
+                                    <option value="0">---</option>
+                                    <option value="Becoming a Partner">Becoming a Partner</option>
+                                    <option value="Purchasing TheologyX Software">Purchasing TheologyX Software</option>
+                                    <option value="Purchasing a Theo® Box">Purchasing a Theo® Box</option>
+                                    <option value="Advertising on TheologyX">Advertising on TheologyX</option>
+                                    <option value="Sponsoring a Student">Sponsoring a Student</option>
+                                    <option value="Becoming an Instructor">Becoming an Instructor</option>
+                                </select>
+
+                            </div>
+
+                            <div class="form-field text-message">
+                                <label for="contact-message" class="focus-out">
+                                    <span class="label-message">Message</span>
+                                </label>
+                                <textarea id="contact-message" rows="10" cols="50" name="message" class="input-block "
+                                          value="">
+                    </textarea>
+
+                            </div>
+
+                            <input type="submit" value="Submit">
+                        </form>
+
+
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    #second,
+    #first {
+        display: none;
+    }
+</style>
+
+<script>
+    document.getElementById('learner').onclick = function () {
+
+        {#document.getElementById('first').style.visibility = 'visible';#}
+        {#document.getElementById('second').style.visibility = 'hidden';#}
+        document.getElementById('first').style.display = 'block';
+        document.getElementById('second').style.display = 'none';
+    }
+    document.getElementById('org').onclick = function () {
+        {#document.getElementById('second').style.visibility = 'visible';#}
+        {#document.getElementById('first').style.visibility = 'hidden';#}
+        document.getElementById('second').style.display = 'block';
+        document.getElementById('first').style.display = 'none';
+    }
+
+</script>
