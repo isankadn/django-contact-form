@@ -1,10 +1,10 @@
-{{ name }}
-{{ country }}
-{{ email }}
-{{ orgname }}
-{{ phone }}
-{{ interest }}
-{{ message }}
+Name: {{ name }}
+Country: {{ country }}
+Email: {{ email }}
+Organization: {{ orgname }}
+Phone: {{ phone }}
+Interest: {{ interest }}
+Message: {{ message }}
 
 
 
