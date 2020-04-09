@@ -40,9 +40,9 @@ from django.conf import settings
                                 </div>
                             </fieldset>
                         </form>
-{% csrf_token %}
-                        <form method="post"  action="{% url 'contact_form' %}" id="first">
 
+                        <form method="post"  action="{% url 'contact_form' %}" id="first">
+                            {% csrf_token %} ${ csrf_token }
                             <div class="form-field text-name">
                                 <label for="contact-name" class="focus-out">
                                     <span class="label-text">Your Name</span>
