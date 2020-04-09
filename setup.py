@@ -8,7 +8,7 @@ setup(name='django-contact-form',
       zip_safe=False, # eggs are the devil.
       description='A generic contact-form application for Django',
       long_description=open(os.path.join(os.path.dirname(__file__),
-                                         'README.rst')).read(),
+                                         'README.md')).read(),
       author='James Bennett, Isanka Wijerathne (forked & editted)',
       author_email='',
       url='https://github.com/isankadn/django-contact-form.git',
