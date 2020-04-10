@@ -30,7 +30,7 @@ class ContactForm(forms.Form):
                              label=_(u'Your email address'))
     interest = forms.CharField(max_length=100,
                             label=_(u'interest'))
-    message = forms.CharField(widget=forms.Textarea,
+    body = forms.CharField(widget=forms.Textarea,
                            label=_(u'Your message'))
 
     from_email = settings.DEFAULT_FROM_EMAIL
