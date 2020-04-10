@@ -4,7 +4,7 @@ Email: {{ email }}
 Organization: {{ orgname }}
 Phone: {{ phone }}
 Interest: {{ interest }}
-Message: {{ message }}
+Message: {{ body }}
 
 
 
