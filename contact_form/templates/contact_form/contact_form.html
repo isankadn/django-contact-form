@@ -24,7 +24,7 @@ from django.conf import settings
             <div id="login-and-registration-container" class="login-register">
                 <section id="register-anchor" class="form-type">
                     <div id="register-form" class="form-wrapper ">
-                        <div>I’m contacting you as a</div>
+                        <div class="contact-intro">I’m contacting you as a </div>
                         <form id="primary">
                             <fieldset id="selectgroup">
                                 <div class="radio-select">
@@ -118,7 +118,7 @@ from django.conf import settings
 
                             <div class="form-field text-orgname">
                                 <label for="contact-orgname" class="focus-out">
-                                    <span class="label-text">Organization Name</span>
+                                    <span class="label-text">Organisation Name</span>
                                 </label>
                                 <input id="contact-orgname" type="text" name="orgname" class="input-block " required=""
                                        value="">
@@ -196,6 +196,10 @@ position: relative !important;
     padding-left: 0 !important;
     opacity: 0.75;
     z-index: 1;
+    }
+    .contact-intro{
+        font: italic 300 1rem/1.6rem Georgia,Cambria,"Times New Roman",Times,serif;
+        padding-bottom: 5px;
     }
 </style>
 
