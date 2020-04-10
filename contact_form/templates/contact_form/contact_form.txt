@@ -3,12 +3,8 @@ Country: {{ country }}
 Email: {{ email }}
 Organization: {{ orgname }}
 Phone: {{ phone }}
-Message: {{ body }}
 Interest: {{ interest }}
-
-
-
-
+Message: {{ body }}
 
 
 

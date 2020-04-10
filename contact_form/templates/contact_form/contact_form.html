@@ -107,8 +107,8 @@ from django.conf import settings
 
 
                         <form method="post" id="second">
-
-                            <input type="hidden" name="csrfmiddlewaretoken" value="${ csrf_token }">
+{% csrf_token %}
+                            <input type="hidden" name="acsrfmiddlewaretoken" value="${ csrf_token }">
                             <div class="form-field text-name">
                                 <label for="contact-name" class="focus-out">
                                     <span class="label-text">Your Name</span>
